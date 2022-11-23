@@ -15,7 +15,7 @@ body, html {
   background-color: #FCD35F;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 .hero nav {
@@ -171,26 +171,34 @@ body, html {
   align-items: center;
   cursor: pointer;
   height: 3.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .hero .more-container > p {
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #FAFAFA;
+  color: white;
   margin-right: 0.6rem;
+  transition: 0.2s all ease-in-out;
 }
 .hero .more-container .more-line {
   width: 50px;
   height: 3px;
-  background-color: #FAFAFA;
+  background-color: white;
+  transition: 0.2s all ease-in-out;
 }
 @media screen and (min-width: 1200px) {
   .hero .more-container > p {
     font-size: 1.2rem;
+    color: #323232;
   }
   .hero .more-container .more-line {
     width: 7rem;
+    background-color: #323232;
   }
 }
 .hero .hero-line {
@@ -227,4 +235,150 @@ body, html {
   50% {
     border-color: transparent;
   }
+}
+.profile-slider {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #FAFAFA;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all ease-in-out;
+  font-family: "Barlow", sans-serif;
+  padding-bottom: 5rem;
+}
+.profile-slider .arrow {
+  margin: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+@media screen and (min-width: 1000px) {
+  .profile-slider .arrow {
+    font-size: 2rem;
+    margin: 1.5rem;
+  }
+}
+.profile-slider .profile-container {
+  max-width: 1600px;
+  margin-inline: 4rem;
+}
+@media screen and (min-width: 1600px) {
+  .profile-slider .profile-container {
+    margin-inline: auto;
+  }
+}
+.profile-slider .profile-container .profile-label {
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+.profile-slider .profile-container > p {
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+@media screen and (min-width: 776px) {
+  .profile-slider .profile-container .profile-label {
+    font-size: 2.4rem;
+  }
+  .profile-slider .profile-container > p {
+    font-size: 1.3rem;
+  }
+}
+.profile-slider .profile-container .profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.profile-slider .profile-container .profile-grid .profile-image {
+  width: 10rem;
+  margin: 0;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+.profile-slider .profile-container .profile-grid .profile-about .about {
+  margin: 0;
+  margin-top: -1rem;
+  max-width: 500px;
+}
+.profile-slider .profile-container .profile-grid .profile-about .name {
+  margin-top: 2rem;
+}
+.profile-slider .profile-container .profile-grid .profile-about .details {
+  margin-bottom: 1.2rem;
+}
+.profile-slider .profile-container .profile-grid .profile-about .details > p {
+  margin: 0;
+  margin-bottom: 8px;
+}
+.profile-slider .profile-container .profile-grid .profile-about .details > a {
+  text-decoration: none;
+  color: black;
+}
+.profile-slider .profile-container .profile-grid .profile-about .ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.profile-slider .profile-container .profile-grid .profile-about .ul > li {
+  margin-right: 1rem;
+  transition: 0.2s all ease-in-out;
+}
+@media screen and (min-width: 776px) {
+  .profile-slider .profile-container .profile-grid {
+    margin-top: 7rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .profile-slider .profile-container .profile-grid .profile-image {
+    width: 13rem;
+    margin-top: 0rem;
+  }
+}
+@media screen and (min-width: 776px) and (min-width: 1000px) {
+  .profile-slider .profile-container .profile-grid .profile-image {
+    width: 15rem;
+    margin-top: -2.5rem;
+  }
+}
+@media screen and (min-width: 776px) {
+  .profile-slider .profile-container .profile-grid .profile-about {
+    font-size: 1.1rem;
+  }
+}
+
+.profile-label:before {
+  content: "";
+  position: absolute;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  background-color: #FCD35F;
+  width: 5rem;
+  height: 3px;
+  bottom: -0.5rem;
+}
+@media screen and (min-width: 776px) {
+  .profile-label:before {
+    height: 4px;
+  }
+}
+
+.li:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

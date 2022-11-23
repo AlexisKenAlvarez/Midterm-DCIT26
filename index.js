@@ -7,6 +7,7 @@ const { hero } = require("./routes")
 
 app.use(express.static("assets"))
 app.use("/css", express.static(__dirname + "assets/style"))
+app.use("/script", express.static(__dirname + "assets/script"))
 
 hero(app)
 
