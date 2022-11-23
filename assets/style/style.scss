@@ -271,9 +271,10 @@ body, html {
         margin: 1rem;
         position: absolute;
         cursor: pointer;
+        width: 1rem;
 
         @media screen and (min-width: 1000px) {
-            font-size: 2rem;
+            width: 2rem;
             margin: 1.5rem;
         }
     }

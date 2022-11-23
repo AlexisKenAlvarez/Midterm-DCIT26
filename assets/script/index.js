@@ -31,6 +31,5 @@ more.addEventListener("mouseout", () => {
 arrow.addEventListener("click", () => {
     slider.style.opacity = "0"
     slider.style.pointerEvents = "none"
-
 })
 
