@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 0 !important;
+  margin: 0;
+  overflow-x: hidden;
+  min-width: -webkit-fit-content !important;
+  min-width: -moz-fit-content !important;
+  min-width: fit-content !important;
+}
+
+.hero {
+  background-color: #FCD35F;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.hero nav {
+  height: auto;
+  width: 100%;
+}
+.hero nav .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero nav .nav-container .logo {
+  width: 4rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.hero nav .nav-container .burger {
+  font-size: 2.2rem;
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+.hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+}
+@media screen and (min-width: 584px) {
+  .hero .hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 888px) {
+  .hero .hero-container {
+    max-width: 850px;
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero .hero-container {
+    max-width: 1000px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero .hero-container {
+    max-width: 1100px;
+  }
+}
+.hero .hero-container .hero-text {
+  z-index: 2;
+  text-align: right;
+}
+.hero .hero-container .hero-text .typewriter-container .typewriter {
+  color: black;
+  font-family: monospace;
+  margin: 0;
+  text-align: right;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  width: 10rem;
+  margin-left: auto;
+  -webkit-animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+          animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+@media screen and (min-width: 584px) {
+  .hero .hero-container .hero-text {
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 888px) {
+  .hero .hero-container .hero-text {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero .hero-container .hero-text {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero .hero-container .hero-text {
+    font-size: 1.8rem;
+  }
+}
+.hero .hero-container .hero-text > h1 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  margin-right: 1rem;
+  color: #9F5454;
+  font-weight: 800;
+}
+.hero .hero-container .hero-text > h2 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  color: #323232;
+  font-weight: 800;
+}
+.hero .hero-container .hero-image {
+  width: 13rem;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (min-width: 584px) {
+  .hero .hero-container .hero-image {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 17rem;
+  }
+}
+@media screen and (min-width: 584px) and (min-height: 682px) {
+  .hero .hero-container .hero-image {
+    width: 20rem;
+    right: 0rem;
+  }
+}
+@media screen and (min-width: 690px) {
+  .hero .hero-container .hero-image {
+    width: 21rem;
+  }
+}
+@media screen and (min-height: 757px) and (min-width: 1000px) {
+  .hero .hero-container .hero-image {
+    width: 28rem;
+  }
+}
+.hero .more-container {
+  position: absolute;
+  bottom: 0rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 3.5rem;
+}
+.hero .more-container > p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #FAFAFA;
+  margin-right: 0.6rem;
+}
+.hero .more-container .more-line {
+  width: 50px;
+  height: 3px;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 1200px) {
+  .hero .more-container > p {
+    font-size: 1.2rem;
+  }
+  .hero .more-container .more-line {
+    width: 7rem;
+  }
+}
+.hero .hero-line {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3px;
+  height: 60px;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 1200px) {
+  .hero .hero-line {
+    height: 7rem;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}/*# sourceMappingURL=style.css.map */
