@@ -130,6 +130,32 @@ body, html {
   color: #323232;
   font-weight: 800;
 }
+.hero .hero-container .hero-text .button {
+  margin-top: -1.3rem;
+  margin-right: 1.5rem;
+  background-color: #9F5454;
+  width: 7rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  border-radius: 1rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  box-shadow: 1px 5px 0px 0px rgb(50, 50, 50);
+  -webkit-box-shadow: 1px 5px 0px 0px rgb(50, 50, 50);
+  -moz-box-shadow: 1px 5px 0px 0px rgb(50, 50, 50);
+  cursor: pointer;
+}
+@media screen and (min-width: 584px) {
+  .hero .hero-container .hero-text .button {
+    width: 9rem;
+  }
+}
 .hero .hero-container .hero-image {
   width: 13rem;
   margin: 0 auto;
